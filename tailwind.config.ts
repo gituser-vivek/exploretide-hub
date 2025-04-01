@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors for FindIt
+                findit: {
+                    purple: '#8B5CF6',
+                    blue: '#0EA5E9',
+                    cyan: '#06B6D4',
+                    teal: '#14B8A6',
+                    green: '#10B981',
+                    yellow: '#F59E0B',
+                    orange: '#F97316',
+                    pink: '#EC4899',
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +96,21 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'pulse-slow': {
+                    '0%, 100%': { opacity: '1' },
+                    '50%': { opacity: '0.7' },
+                },
+                'float': {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' },
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'pulse-slow': 'pulse-slow 3s infinite ease-in-out',
+                'float': 'float 6s infinite ease-in-out',
 			}
 		}
 	},
